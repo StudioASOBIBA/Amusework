@@ -6,7 +6,6 @@ AllowShortFunctionsOnASingleLine: None
 AllowShortIfStatementsOnASingleLine: false
 AllowShortLoopsOnASingleLine: false
 BreakBeforeInheritanceComma: false
-InheritanceListStyle: CarryOn
 BreakBeforeBraces: Custom
 BraceWrapping:
   AfterClass: true
@@ -35,4 +34,3 @@ TabWidth: 4
 UseTab: Never
 PointerAlignment: Left
 AlignAfterOpenBracket: Align
----
