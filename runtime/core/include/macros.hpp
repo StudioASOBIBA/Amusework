@@ -119,4 +119,6 @@
 
 #define AMUSE_UNUSED(x) (void)(x)
 
+#define AMUSE_FALLTHROUGH() [[fallthrough]]
+
 #endif // !AMUSE_INCLUDE_MACROS_HPP
