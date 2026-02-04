@@ -6,4 +6,4 @@ namespace amuse::io::directory
     {
         return false;
     }
-} // namespace amuse::io
+} // namespace amuse::io::directory
