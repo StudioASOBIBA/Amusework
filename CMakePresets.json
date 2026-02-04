@@ -1,0 +1,158 @@
+{
+  "version": 3,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 22,
+    "patch": 1
+  },
+  "configurePresets": [
+    {
+      "name": "amuse-debug",
+      "description": "Configure Amuse for debug build",
+      "hidden": true,
+      "binaryDir": "${sourceDir}/out/${presetName}",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug"
+      }
+    },
+    {
+      "name": "amuse-release",
+      "description": "Configure Amuse for release build",
+      "hidden": true,
+      "binaryDir": "${sourceDir}/out/${presetName}",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release"
+      }
+    },
+    {
+      "name": "amuse-all",
+      "hidden": true,
+      "cacheVariables": {
+        "AMUSE_BUILD_EDITOR": "ON",
+        "AMUSE_BUILD_EXAMPLES": "ON",
+        "AMUSE_BUILD_RUNTIME": "ON",
+        "AMUSE_BUILD_TESTS": "ON"
+      }
+    },
+    {
+      "name": "amuse-editor",
+      "hidden": true,
+      "cacheVariables": {
+        "AMUSE_BUILD_EDITOR": "ON",
+        "AMUSE_BUILD_EXAMPLES": "OFF",
+        "AMUSE_BUILD_RUNTIME": "OFF",
+        "AMUSE_BUILD_TESTS": "OFF"
+      }
+    },
+    {
+      "name": "amuse-examples",
+      "hidden": true,
+      "cacheVariables": {
+        "AMUSE_BUILD_EDITOR": "OFF",
+        "AMUSE_BUILD_EXAMPLES": "ON",
+        "AMUSE_BUILD_RUNTIME": "OFF",
+        "AMUSE_BUILD_TESTS": "OFF"
+      }
+    },
+    {
+      "name": "amuse-runtime",
+      "hidden": true,
+      "cacheVariables": {
+        "AMUSE_BUILD_EDITOR": "OFF",
+        "AMUSE_BUILD_EXAMPLES": "OFF",
+        "AMUSE_BUILD_RUNTIME": "ON",
+        "AMUSE_BUILD_TESTS": "OFF"
+      }
+    },
+    {
+      "name": "amuse-tests",
+      "hidden": true,
+      "cacheVariables": {
+        "AMUSE_BUILD_EDITOR": "OFF",
+        "AMUSE_BUILD_EXAMPLES": "OFF",
+        "AMUSE_BUILD_RUNTIME": "OFF",
+        "AMUSE_BUILD_TESTS": "ON"
+      }
+    },
+    {
+      "name": "amuse-all-debug",
+      "displayName": "Build Amuse All(Debug)",
+      "inherits": [
+        "amuse-debug",
+        "amuse-all"
+      ]
+    },
+    {
+      "name": "amuse-all-release",
+      "displayName": "Build Amuse All(Release)",
+      "inherits": [
+        "amuse-release",
+        "amuse-all"
+      ]
+    },
+    {
+      "name": "amuse-editor-debug",
+      "displayName": "Build Amuse Editor(Debug)",
+      "inherits": [
+        "amuse-debug",
+        "amuse-editor"
+      ]
+    },
+    {
+      "name": "amuse-editor-release",
+      "displayName": "Build Amuse Editor(Release)",
+      "inherits": [
+        "amuse-release",
+        "amuse-editor"
+      ]
+    },
+    {
+      "name": "amuse-examples-debug",
+      "displayName": "Build Amuse Examples(Debug)",
+      "inherits": [
+        "amuse-debug",
+        "amuse-examples"
+      ]
+    },
+    {
+      "name": "amuse-examples-release",
+      "displayName": "Build Amuse Examples(Release)",
+      "inherits": [
+        "amuse-release",
+        "amuse-examples"
+      ]
+    },
+    {
+      "name": "amuse-runtime-debug",
+      "displayName": "Build Amuse Runtime(Debug)",
+      "inherits": [
+        "amuse-debug",
+        "amuse-runtime"
+      ]
+    },
+    {
+      "name": "amuse-runtime-release",
+      "displayName": "Build Amuse Runtime(Release)",
+      "inherits": [
+        "amuse-release",
+        "amuse-runtime"
+      ]
+    },
+    {
+      "name": "amuse-tests-release",
+      "displayName": "Build Amuse Tests(Release)",
+      "inherits": [
+        "amuse-release",
+        "amuse-tests"
+      ]
+    },
+    {
+      "name": "amuse-tests-debug",
+      "displayName": "Build Amuse Tests(Debug)",
+      "inherits": [
+        "amuse-debug",
+        "amuse-tests"
+      ]
+    }
+  ]
+}
