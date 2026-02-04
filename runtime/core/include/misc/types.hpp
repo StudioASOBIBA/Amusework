@@ -26,9 +26,9 @@ namespace amuse::misc
     using Float64 = double;
 }
 
-static_assert(sizeof(amuse::core::Int32) == 4, "Int32 must be 4 bytes.");
-static_assert(sizeof(amuse::core::Int64) == 8, "Int64 must be 8 bytes.");
-static_assert(sizeof(amuse::core::Float32) == 4, "Float32 must be 4 bytes.");
-static_assert(sizeof(amuse::core::Float64) == 8, "Float64 must be 8 bytes.");
+static_assert(sizeof(amuse::misc::Int32) == 4, "Int32 must be 4 bytes.");
+static_assert(sizeof(amuse::misc::Int64) == 8, "Int64 must be 8 bytes.");
+static_assert(sizeof(amuse::misc::Float32) == 4, "Float32 must be 4 bytes.");
+static_assert(sizeof(amuse::misc::Float64) == 8, "Float64 must be 8 bytes.");
 
 #endif // !AMUSE_INCLUDE_TYPES_HPP
