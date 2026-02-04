@@ -8,15 +8,23 @@ project(amuse
 
 include(cmake/settings.cmake)
 
-option(AMUSE_BUILD_RUNTIME "Build Amuse runtime library" ON)
-option(AMUSE_BUILD_EXAMPLES "Build Amuse examples" ON)
-
 if (AMUSE_BUILD_RUNTIME)
 	message(TRACE "[Amuse] Building Amuse runtime library")
 	add_subdirectory(runtime)
+endif ()
+
+if (AMUSE_BUILD_EDITOR)
+	# message(TRACE "[Amuse] Building Amuse editor program")
+	# add_subdirectory(editor)
 endif ()
 
 if(AMUSE_BUILD_EXAMPLES)
 	message(TRACE "[Amuse] Building Amuse examples")
 	add_subdirectory(examples)
 endif()
+
+if (AMUSE_BUILD_TESTS)
+	# message(TRACE "[Amuse] Building Amuse tests")
+	# enable_testing()
+	# add_subdirectory(tests)
+endif ()
